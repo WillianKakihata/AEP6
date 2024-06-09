@@ -52,11 +52,13 @@ body form {
 }
 
 .login input{
+    margin:0;
     border: 1px solid black;
     width: 230px;    
 }
 
 .senha {
+    margin:0;
     display: flex;
     flex-direction:row;
     justify-content: space-around;

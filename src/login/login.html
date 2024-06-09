@@ -3,23 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./login.css">
+   
     <title>login</title>
 </head>
 <body>
-    <form action="">
+    <form id="form-login" onsubmit="enviaDados()">
         <div class="acesso">
             <div class="login">
-                <label for="">LOGIN</label>
-                <input type="text">
+                <P>LOGIN</P>
+                <input type="text" name="login">
             </div>
             <div class="senha">
-                <label for="">SENHA</label>
-                <input type="password">
+                <p>SENHA</p>
+                <input type="password" name="senha">
+                
             </div>
-            <button>ENTRAR</button>
+            <button type="submit">ENTRAR</button>
             <a href="../cadastro/cadastro.html">CADASTRAR</a>
         </div>
     </form>
+    
 </body>
+<link rel="stylesheet" href="./login.css">
 </html>
