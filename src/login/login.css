@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid red;
+}
+
+body form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.acesso {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 3px solid black;
+    height: 300px;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+}
+
+.acesso button {
+    width: 250px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+}
+
+.acesso a{
+ text-decoration: none;
+ color: black;   
+}
+.login {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.login input{
+    border: 1px solid black;
+    width: 230px;    
+}
+
+.senha {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.senha input{
+    border: 1px solid black;
+    width: 230px;
+}
+
