@@ -1,0 +1,56 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+body form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.acesso button {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: black;
+    color: white;
+    transition: 0.5s;
+}
+
+.acesso button:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.acesso a{
+ text-decoration: none;
+ color: black;   
+ 
+}
+
+.informacoes {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    width: 400px;
+    margin-bottom: 10px;
+}
+.acesso p {
+    font-size: 30px;
+}

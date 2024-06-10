@@ -1,33 +1,33 @@
-var users = [
+const usuarios = [
     { login: "Renan", senha: "12354" },
     { login: "Willian", senha: "54312" }
 ];
 
-function enviaDados(e) {
-    e.preventDefault();
+function enviaDados(evento) {
+    evento.preventDefault();
+    const p = document.querySelector("#resultado-login");
     const form = document.querySelector("#form-login");
     const formData = new FormData(form);
 
-    const username = formData.get("login");
+    const login = formData.get("login");
     const senha = formData.get("senha");
 
-    let userFound = false;
+    let usuarioEncontrado = false;
 
-    for (var i = 0; i < users.length; i++) {
-        if (users[i].login === username) {
-            userFound = true;
-            if (users[i].senha === senha) {
-                console.log("Login correto");
-                alert("Login bem-sucedido!");
+    for (const usuario of usuarios) {
+        if (usuario.login === login) {
+            usuarioEncontrado = true;
+            if (usuario.senha === senha) {
+                p.textContent = "Login bem-sucedido!"
+                window.location.href = "../quizzes/quizzes.html"
             } else {
-                console.log("Senha incorreta");
-                alert("Senha incorreta!");
+                p.textContent = "Login ou Senha incorreta"
             }
             break; // Sai do loop uma vez que o usuário foi encontrado
         }
     }
 
-    if (!userFound) {
+    if (!usuarioEncontrado) {
         console.log("Login não encontrado");
         alert("Login não encontrado!");
     }
