@@ -9,28 +9,27 @@
 <body>
     <form id="form-cadastro">
         <p id="resultado-cadastro"></p>
-        <div  class="acesso">
-            <p><b>CADASTRO</b></p>
+        <div class="acesso">
+            <p class="formulario"><b>CADASTRO</b></p>
             <div class="informacoes">
-                <label for="nome">NOME</label>
-                <input type="text" name="nome">
+                <p>NOME</p>
+                <input type="text" name="nome" required>
             </div>
             <div class="informacoes">
-                <label for="email">E-MAIL</label>
-                <input type="email">
+                <p>E-MAIL</p>
+                <input type="email" name="email" required>
             </div>
             <div class="informacoes">
-                <label for="senha">SENHA</label>
-                <input type="password" name="senha">
+                <p>SENHA</p>
+                <input type="password" name="senha" required>
             </div>
            <div class="informacoes">
-                <label for="repetirsenha">REPETIR SENHA</label>
-                <input type="password" name="repetirsenha">
+                <p>REPETIR SENHA</p>
+                <input type="password" name="repetirsenha" required>
            </div>
            <button type="submit">CONCLUIR</button>
         </div>
-        
     </form>
+    <script src="cadastro.js"></script>
 </body>
-<script src="cadastro.js"></script>
 </html>

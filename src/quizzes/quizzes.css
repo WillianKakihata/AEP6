@@ -1,0 +1,41 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.opcoes a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 35px;
+    transform: 0.5s;
+}
+
+.opcoes a:hover{
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+.menu p{
+    font-size: 35px;
+}
