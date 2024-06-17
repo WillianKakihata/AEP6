@@ -15,13 +15,11 @@ function validaCadastro(evento) {
     const repetirsenha = formData.get("repetirsenha");
     let contRepetido = 0;
 
-  
     console.log("Login:", login);
     console.log("Email:", email);
     console.log("Senha:", senha);
     console.log("Repetir Senha:", repetirsenha);
 
-   
     if (login.length > 3 && email.length > 3 && senha.length > 3) {
         if (senha === repetirsenha) {
             for (const usuario of usuarios) {
@@ -32,6 +30,7 @@ function validaCadastro(evento) {
             }
 
             if (contRepetido === 0) {
+                // Aqui você pode continuar com a lógica para adicionar o usuário ao array `usuarios`
                 usuarios.push({ login: login, senha: senha }); 
                 p.textContent = "Usuário criado com sucesso!";
                 setTimeout(() => {
@@ -48,10 +47,11 @@ function validaCadastro(evento) {
     }
 }
 
-document.querySelector("#form-cadastro").addEventListener("submit", validaCadastro);
 document.getElementById('form-cadastro').addEventListener('submit', async function(event) {
     event.preventDefault();
     
+    validaCadastro(event); // Chama a função validaCadastro para validar o formulário
+
     const nome = event.target.nome.value;
     const email = event.target.email.value;
     const senha = event.target.senha.value;
