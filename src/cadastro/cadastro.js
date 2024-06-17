@@ -49,3 +49,36 @@ function validaCadastro(evento) {
 }
 
 document.querySelector("#form-cadastro").addEventListener("submit", validaCadastro);
+document.getElementById('form-cadastro').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    
+    const nome = event.target.nome.value;
+    const email = event.target.email.value;
+    const senha = event.target.senha.value;
+    const repetirSenha = event.target.repetirsenha.value;
+    
+    if (senha !== repetirSenha) {
+        document.getElementById('resultado-cadastro').innerText = 'As senhas não coincidem';
+        return;
+    }
+
+    try {
+        const response = await fetch('/auth/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email, password: senha })
+        });
+
+        const result = await response.json();
+        
+        if (response.ok) {
+            document.getElementById('resultado-cadastro').innerText = 'Usuário registrado com sucesso!';
+        } else {
+            document.getElementById('resultado-cadastro').innerText = result.message || 'Erro ao registrar usuário';
+        }
+    } catch (error) {
+        document.getElementById('resultado-cadastro').innerText = 'Erro ao registrar usuário';
+    }
+});
