@@ -17,7 +17,7 @@ const db = mysql.createConnection({
     password: 'hideaki123', // Sua senha do MySQL
     database: 'users_db' // Nome do seu banco de dados
 });
-
+ 
 // Conectar ao MySQL
 db.connect((err) => {
     if (err) {
